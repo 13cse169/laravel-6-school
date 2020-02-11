@@ -31,8 +31,8 @@ Auth::routes();
 Route::resource('school', 'SchoolController')->only([
     'index', 'create', 'store', 'show', 'edit', 'update', 'destroy'
 ])->middleware('auth');
-
 Route::post('school/export/data', 'SchoolController@exportData');
+
 
 Route::group(['prefix' => 'teacher', 'middleware' => 'auth'], function(){
     Route::get('/', 'TeacherController@index');

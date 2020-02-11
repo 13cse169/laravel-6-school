@@ -51,10 +51,6 @@
                                 echo wordwrap($school->address, 20, "<br>\n", TRUE)
                             @endphp
                         </td>
-                        {{-- <td>{{ $school->name }}</td>
-                        <td>{{ $school->email }}</td>
-                        <td>{{ $school->phone }}</td>
-                        <td>{{ $school->address }}</td> --}}
                     </tr>
                 @endforeach
             </tbody>

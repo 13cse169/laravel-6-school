@@ -1,6 +1,5 @@
 <?php
     
 return[
-    'sclinfo' => 'School Information',
-
+    'sclinfo' => 'School Information Hello Everyone',
 ];

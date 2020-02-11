@@ -25,6 +25,7 @@ class SchoolController extends Controller
     
     public function index(Request $request)
     {
+
         /* $myArray = [
             'like'     => 'like',
             'column'   => 'column',
