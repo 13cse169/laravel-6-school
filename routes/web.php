@@ -18,10 +18,6 @@ Route::group(['prefix' => '{language}'], function () {
     
 }); */
 
-Route::resource('{locale}/school', 'SchoolController')->only([
-    'index', 'create', 'store', 'show', 'edit', 'update', 'destroy'
-]);
-
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -40,14 +36,14 @@ Auth::routes();
     Route::post('/export/data', 'SchoolController@exportData');
 }); */
 
-/* 
+
 Route::resource('school', 'SchoolController')->only([
     'index', 'create', 'store', 'show', 'edit', 'update', 'destroy'
 ])->middleware('auth');
 Route::post('school/export/data', 'SchoolController@exportData');
- */
 
-/* 
+
+
 Route::group(['prefix' => 'teacher', 'middleware' => 'auth'], function(){
     Route::get('/', 'TeacherController@index');
     Route::get('/create', 'TeacherController@create');
@@ -60,8 +56,7 @@ Route::group(['prefix' => 'teacher', 'middleware' => 'auth'], function(){
     Route::post('/export/data', 'TeacherController@exportData');
 });
 
- */
-/* Route::group(['prefix' => 'student', 'middleware' => 'auth'], function(){
+Route::group(['prefix' => 'student', 'middleware' => 'auth'], function(){
     Route::get('', 'StudentController@index');
     Route::get('add', 'StudentController@create');
     Route::post('add/new', 'StudentController@store');
@@ -70,29 +65,16 @@ Route::group(['prefix' => 'teacher', 'middleware' => 'auth'], function(){
     Route::post('update/info', 'StudentController@update');
     Route::post('/list/pagination', 'StudentController@pagination');
     Route::post('/remove/data', 'StudentController@destroy');
-}); */
+});
 
-/* Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => 'auth'], function(){
     Route::get('send-mail', 'SendMailController@mail');
     Route::post('send-mail/send', 'SendMailController@send');
-}); */
+});
 
 
-/*
-Route::any('/student', 'HomeController@studentAdd')->name('student');
-Route::any('/student/{id}', 'HomeController@studentAdd')->name('student');
-Route::any('/student/detail/{id}', 'HomeController@studentView')->name('student');
- */
-
-
- /* Route::post('/get/teacher', 'HomeController@getTeacher');
-Route::post('/remove/data', 'HomeController@removeData');
-Route::post('/get/student', 'HomeController@getStudent');
-Route::post('/get/student/page', 'HomeController@getStudentPage'); */
-
-
-/* Route::group(['prefix' => 'employee', 'middleware' => 'auth'], function(){
+Route::group(['prefix' => 'employee', 'middleware' => 'auth'], function(){
     Route::get('/', 'EmployeeController@index');
     Route::get('/add', 'EmployeeController@create');
     Route::post('/add/save', 'EmployeeController@store');
-}); */
+});
