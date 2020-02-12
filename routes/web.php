@@ -11,10 +11,22 @@
 |
 */
 
+/* Route::redirect('/', '/en');
+
+Route::group(['prefix' => '{language}'], function () {
+
+    
+}); */
+
+Route::resource('{locale}/school', 'SchoolController')->only([
+    'index', 'create', 'store', 'show', 'edit', 'update', 'destroy'
+]);
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+
 
 /* Route::group(['prefix' => 'school', 'middleware' => 'auth'], function(){
     Route::get('/', 'SchoolController@index');
@@ -28,12 +40,14 @@ Auth::routes();
     Route::post('/export/data', 'SchoolController@exportData');
 }); */
 
+/* 
 Route::resource('school', 'SchoolController')->only([
     'index', 'create', 'store', 'show', 'edit', 'update', 'destroy'
 ])->middleware('auth');
 Route::post('school/export/data', 'SchoolController@exportData');
+ */
 
-
+/* 
 Route::group(['prefix' => 'teacher', 'middleware' => 'auth'], function(){
     Route::get('/', 'TeacherController@index');
     Route::get('/create', 'TeacherController@create');
@@ -46,6 +60,7 @@ Route::group(['prefix' => 'teacher', 'middleware' => 'auth'], function(){
     Route::post('/export/data', 'TeacherController@exportData');
 });
 
+ */
 /* Route::group(['prefix' => 'student', 'middleware' => 'auth'], function(){
     Route::get('', 'StudentController@index');
     Route::get('add', 'StudentController@create');

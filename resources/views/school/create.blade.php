@@ -15,6 +15,10 @@
         </nav>
     </div>
 
+    {{
+        url()->previous()
+    }}
+
     <div class="row quick-action-toolbar">
         <div class="col-md-10 m-auto grid-margin">
             <div class="card">
