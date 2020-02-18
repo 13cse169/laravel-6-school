@@ -82,6 +82,7 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        '0b842e8ef8cfdfdcb24ef53a88efa4fc' => __DIR__ . '/..' . '/longman/laravel-multilang/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -114,6 +115,7 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
@@ -160,6 +162,7 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         ),
         'L' => 
         array (
+            'Longman\\LaravelMultiLang\\' => 25,
             'League\\Flysystem\\' => 17,
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
@@ -274,6 +277,10 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
         ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
+        ),
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
@@ -385,6 +392,10 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         'Maatwebsite\\Excel\\' => 
         array (
             0 => __DIR__ . '/..' . '/maatwebsite/excel/src',
+        ),
+        'Longman\\LaravelMultiLang\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -520,12 +531,17 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
     );
 
     public static $classMap = array (
+        'App\\Console\\Commands\\AddSchoolCommand' => __DIR__ . '/../..' . '/app/Console/Commands/AddSchoolCommand.php',
         'App\\Console\\Commands\\SendEmails' => __DIR__ . '/../..' . '/app/Console/Commands/SendEmails.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\EmpRegisteredEvent' => __DIR__ . '/../..' . '/app/Events/EmpRegisteredEvent.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Exports\\PostExport' => __DIR__ . '/../..' . '/app/Exports/PostExport.php',
+        'App\\Exports\\SchoolExport' => __DIR__ . '/../..' . '/app/Exports/SchoolExport.php',
+        'App\\Exports\\TeacherExport' => __DIR__ . '/../..' . '/app/Exports/TeacherExport.php',
+        'App\\Helpers\\FormSecurity' => __DIR__ . '/../..' . '/app/Helpers/FormSecurity.php',
         'App\\Helpers\\MyHelper' => __DIR__ . '/../..' . '/app/Helpers/MyHelper.php',
+        'App\\Http\\Controllers\\API\\PhotoController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/PhotoController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -544,6 +560,7 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         'App\\Http\\Middleware\\CheckAge' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckAge.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
+        'App\\Http\\Middleware\\Localization' => __DIR__ . '/../..' . '/app/Http/Middleware/Localization.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
@@ -2401,6 +2418,19 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'Longman\\LaravelMultiLang\\Config' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Config.php',
+        'Longman\\LaravelMultiLang\\Console\\ExportCommand' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Console/ExportCommand.php',
+        'Longman\\LaravelMultiLang\\Console\\ImportCommand' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Console/ImportCommand.php',
+        'Longman\\LaravelMultiLang\\Console\\MigrationCommand' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Console/MigrationCommand.php',
+        'Longman\\LaravelMultiLang\\Console\\TextsCommand' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Console/TextsCommand.php',
+        'Longman\\LaravelMultiLang\\Facades\\MultiLang' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Facades/MultiLang.php',
+        'Longman\\LaravelMultiLang\\Middleware\\MultiLang' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Middleware/MultiLang.php',
+        'Longman\\LaravelMultiLang\\Models\\Localizable' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Models/Localizable.php',
+        'Longman\\LaravelMultiLang\\Models\\LocalizableScope' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Models/LocalizableScope.php',
+        'Longman\\LaravelMultiLang\\Models\\Text' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Models/Text.php',
+        'Longman\\LaravelMultiLang\\MultiLang' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/MultiLang.php',
+        'Longman\\LaravelMultiLang\\MultiLangServiceProvider' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/MultiLangServiceProvider.php',
+        'Longman\\LaravelMultiLang\\Repository' => __DIR__ . '/..' . '/longman/laravel-multilang/src/MultiLang/Repository.php',
         'Maatwebsite\\Excel\\Cell' => __DIR__ . '/..' . '/maatwebsite/excel/src/Cell.php',
         'Maatwebsite\\Excel\\ChunkReader' => __DIR__ . '/..' . '/maatwebsite/excel/src/ChunkReader.php',
         'Maatwebsite\\Excel\\Concerns\\Exportable' => __DIR__ . '/..' . '/maatwebsite/excel/src/Concerns/Exportable.php',
@@ -4828,6 +4858,18 @@ class ComposerStaticInita1c92c5dc8d21246405cb48fa1a34a05
         'Symfony\\Component\\VarDumper\\Server\\DumpServer' => __DIR__ . '/..' . '/symfony/var-dumper/Server/DumpServer.php',
         'Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait' => __DIR__ . '/..' . '/symfony/var-dumper/Test/VarDumperTestTrait.php',
         'Symfony\\Component\\VarDumper\\VarDumper' => __DIR__ . '/..' . '/symfony/var-dumper/VarDumper.php',
+        'Symfony\\Component\\Yaml\\Command\\LintCommand' => __DIR__ . '/..' . '/symfony/yaml/Command/LintCommand.php',
+        'Symfony\\Component\\Yaml\\Dumper' => __DIR__ . '/..' . '/symfony/yaml/Dumper.php',
+        'Symfony\\Component\\Yaml\\Escaper' => __DIR__ . '/..' . '/symfony/yaml/Escaper.php',
+        'Symfony\\Component\\Yaml\\Exception\\DumpException' => __DIR__ . '/..' . '/symfony/yaml/Exception/DumpException.php',
+        'Symfony\\Component\\Yaml\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/yaml/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\Yaml\\Exception\\ParseException' => __DIR__ . '/..' . '/symfony/yaml/Exception/ParseException.php',
+        'Symfony\\Component\\Yaml\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/yaml/Exception/RuntimeException.php',
+        'Symfony\\Component\\Yaml\\Inline' => __DIR__ . '/..' . '/symfony/yaml/Inline.php',
+        'Symfony\\Component\\Yaml\\Parser' => __DIR__ . '/..' . '/symfony/yaml/Parser.php',
+        'Symfony\\Component\\Yaml\\Tag\\TaggedValue' => __DIR__ . '/..' . '/symfony/yaml/Tag/TaggedValue.php',
+        'Symfony\\Component\\Yaml\\Unescaper' => __DIR__ . '/..' . '/symfony/yaml/Unescaper.php',
+        'Symfony\\Component\\Yaml\\Yaml' => __DIR__ . '/..' . '/symfony/yaml/Yaml.php',
         'Symfony\\Contracts\\EventDispatcher\\Event' => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts/Event.php',
         'Symfony\\Contracts\\EventDispatcher\\EventDispatcherInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts/EventDispatcherInterface.php',
         'Symfony\\Contracts\\Service\\ResetInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ResetInterface.php',

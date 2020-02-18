@@ -1,0 +1,59 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Longman\LaravelMultiLang\Console;
+
+use Illuminate\Console\Command;
+
+class TextsCommand extends Command
+{
+    /**
+     * The console command name.
+     *
+     * @var string
+     */
+    protected $signature = 'multilang:texts
+        {--lang= : The lang to show}
+        {--scope= : The scope to show}
+    ';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Show multilang texts and translations.';
+
+    /**
+     * Execute the console command.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        $lang = $this->option('lang');
+        $scope = $this->option('scope');
+
+        $texts = app('multilang')->getAllTexts($lang, $scope);
+
+        if (empty($texts)) {
+            $this->info('Application texts is empty');
+
+            return false;
+        }
+
+        $headers = ['#', 'Text Key', 'Language', 'Scope', 'Text Value'];
+
+        $rows = [];
+        $i = 1;
+        foreach ($texts as $lang => $items) {
+            foreach ($items as $key => $item) {
+                $row = [$i, $key, $item->lang, $item->scope, $item->value];
+                $rows[] = $row;
+                $i++;
+            }
+        }
+        $this->table($headers, $rows);
+    }
+}

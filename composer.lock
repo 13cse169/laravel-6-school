@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5603ea28f912d623e1d5d5736449278a",
+    "content-hash": "2eaa70433675ea94a4feed2cb6ae523f",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -881,6 +881,80 @@
                 "storage"
             ],
             "time": "2020-01-04T16:30:31+00:00"
+        },
+        {
+            "name": "longman/laravel-multilang",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/akalongman/laravel-multilang.git",
+                "reference": "dadafa162b89031f887e5350fdd7175bc14e0415"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/akalongman/laravel-multilang/zipball/dadafa162b89031f887e5350fdd7175bc14e0415",
+                "reference": "dadafa162b89031f887e5350fdd7175bc14e0415",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "illuminate/console": "^6.7",
+                "illuminate/database": "^6.7",
+                "illuminate/http": "^6.7",
+                "illuminate/support": "^6.7",
+                "php": "^7.2",
+                "symfony/translation": "~4.4",
+                "symfony/yaml": "~4.4"
+            },
+            "require-dev": {
+                "longman/php-code-style": "^4.0",
+                "mockery/mockery": "~1.2",
+                "orchestra/testbench": "^4.2",
+                "phpunit/phpunit": "~8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Longman\\LaravelMultiLang\\MultiLangServiceProvider"
+                    ],
+                    "aliases": {
+                        "MultiLang": "Longman\\LaravelMultiLang\\Facades\\MultiLang"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Longman\\LaravelMultiLang\\": "src/MultiLang"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Avtandil Kikabidze aka LONGMAN",
+                    "email": "akalongman@gmail.com",
+                    "homepage": "http://longman.me",
+                    "role": "Maintainer, Developer"
+                }
+            ],
+            "description": "Package to integrate multi language (multi locale) functionality in Laravel 5.x",
+            "homepage": "https://github.com/akalongman/laravel-multilang",
+            "keywords": [
+                "language",
+                "laravel",
+                "locale",
+                "localization",
+                "multilang",
+                "package",
+                "translation"
+            ],
+            "time": "2019-12-17T11:53:53+00:00"
         },
         {
             "name": "maatwebsite/excel",
@@ -3426,6 +3500,65 @@
                 "dump"
             ],
             "time": "2019-12-18T13:41:29+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v4.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "cd014e425b3668220adb865f53bff64b3ad21767"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/cd014e425b3668220adb865f53bff64b3ad21767",
+                "reference": "cd014e425b3668220adb865f53bff64b3ad21767",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "^3.4|^4.0|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2020-01-21T11:12:16+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

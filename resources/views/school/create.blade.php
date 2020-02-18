@@ -15,16 +15,13 @@
         </nav>
     </div>
 
-    {{
-        url()->previous()
-    }}
-
     <div class="row quick-action-toolbar">
         <div class="col-md-10 m-auto grid-margin">
             <div class="card">
                 <div class="card-header d-block d-md-flex">
                     {{-- <h5 class="mb-0">School Information</h5> --}}
-                    <h5 class="mb-0">{{ __('myText.sclinfo') }}</h5>
+                    {{-- <h5 class="mb-0">{{ __('myText.sclinfo') }}</h5> --}}
+                    {{ t('Your translatable string') }}
                     @if (request()->is('school/create'))
                         <i class="ml-auto mb-0">All details are mandatory.<i class="icon-bulb"></i></i>
                     @else

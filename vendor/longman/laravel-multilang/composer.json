@@ -1,0 +1,77 @@
+{
+    "name": "longman/laravel-multilang",
+    "type": "library",
+    "description": "Package to integrate multi language (multi locale) functionality in Laravel 5.x",
+    "keywords": [
+        "locale",
+        "localization",
+        "translation",
+        "language",
+        "laravel",
+        "package",
+        "multilang"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/akalongman/laravel-multilang",
+    "support": {
+        "issues": "https://github.com/akalongman/laravel-multilang/issues",
+        "source": "https://github.com/akalongman/laravel-multilang"
+    },
+    "authors": [
+        {
+            "name": "Avtandil Kikabidze aka LONGMAN",
+            "email": "akalongman@gmail.com",
+            "homepage": "http://longman.me",
+            "role": "Maintainer, Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-mbstring": "*",
+        "symfony/yaml": "~4.4",
+        "symfony/translation": "~4.4",
+        "illuminate/console": "^6.7",
+        "illuminate/support": "^6.7",
+        "illuminate/database": "^6.7",
+        "illuminate/http": "^6.7"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.2",
+        "phpunit/phpunit": "~8.4",
+        "longman/php-code-style": "^4.0",
+        "orchestra/testbench": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Longman\\LaravelMultiLang\\": "src/MultiLang"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Longman\\LaravelMultiLang\\MultiLangServiceProvider"
+            ],
+            "aliases": {
+                "MultiLang": "Longman\\LaravelMultiLang\\Facades\\MultiLang"
+            }
+        }
+    },
+    "scripts": {
+        "phpcs": "./vendor/bin/phpcs --standard=phpcs.xml -spn --encoding=utf-8 src/ tests/ --report-width=150",
+        "phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml -spn --encoding=utf-8 src/ tests/ --report-width=150",
+        "test": "./vendor/bin/phpunit -c phpunit.xml.dist",
+        "coverage-clover": "./vendor/bin/phpunit --stop-on-failure --coverage-clover build/logs/clover.xml",
+        "coverage-html": "./vendor/bin/phpunit --stop-on-failure --coverage-html build/coverage"
+    }
+}

@@ -83,5 +83,13 @@ class FormSecurity
         
         return $formFileds;
     }
+    
+    public static function decryptFormField($formValues)
+    {
+        foreach ($formValues as $key => $value)
+            $formValues[$value] = $key;
+        
+        return $formValues;
+    }
 
 }

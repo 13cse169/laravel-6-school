@@ -25,8 +25,8 @@ class SchoolController extends Controller
     
     public function index(Request $request)
     {
-
-        /* $myArray = [
+/* 
+        $myArray = [
             'like'     => 'like',
             'column'   => 'column',
             'order'    => 'order',
@@ -43,8 +43,10 @@ class SchoolController extends Controller
 
         $decryptedFields = FormSecurity::decryptFormField($encryptedFields);
 
-        print_r($decryptedFields); */
+        print_r($decryptedFields);
 
+        exit();
+ */        
         //$encrypt = FormSecurity::encrypt('Hello', 'Birendra Singh');
         //echo FormSecurity::decrypt($encrypt, 'Birendra Singh');
 

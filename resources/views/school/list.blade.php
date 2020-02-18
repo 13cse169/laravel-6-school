@@ -231,7 +231,7 @@
                             url: "{{ url('school/delete') }}",
                             type: 'POST',
                             dataType: 'json',
-                            data: {id: id, _token: '{{ csrf_token() }}'},
+                            data: {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'},
                         })
                         .done(function(res) {
                             console.log(res);
